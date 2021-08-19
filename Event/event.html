@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Event Manage </title>
+</head>
+<body>
+    <button onclick=" alert('Focus On The Boss') "> Button  </button>
+
+
+ <BUTTON onclick="document.body.style.backgroundColor = 'yellow' ">  CLICK: YELLOW</BUTTON>
+
+ <button onclick=createRedColor() > CLICK : RED</button>
+
+<button id="blueButton"> CLICK : BLUE</button>
+
+<button id="pink-button">CLICK: PINK</button>
+
+
+<script>
+  
+//   a way
+function createRedColor () {
+document.body.style.backgroundColor = "red";
+
+
+}
+
+
+// another way
+document.getElementById("blueButton").onclick = blueCreate; 
+ function blueCreate(){
+document.body.style.backgroundColor = "blue";
+
+
+// another way
+document.getElementById("pink-button").addEventListener("click" , function () {
+
+document.body.style.backgroundColor = "pink" 
+})
+
+
+
+ }
+
+</script>
+</body>
+</html>

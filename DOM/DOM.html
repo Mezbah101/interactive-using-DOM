@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Exploration </title>
+
+<style>
+ 
+ #first-article{
+
+background-color: aqua;
+
+ }
+
+
+</style>
+</head>
+<body>
+
+    <header>
+        <h1> Welcome to My Blog Website  </h1>
+    
+    </header>
+
+<main>
+
+<section class="sectionClass" id="sectionID">
+
+
+    <header>
+        Blog List 
+
+        <ul>
+
+            <li>My Blog - 1</li>
+            <li>My Blog - 2</li>
+            <li>My Blog - 3</li>
+            <li>My Blog - 4</li>
+        </ul>
+    </header>
+    
+
+  <article id="first-article" class="blog">
+      <h3>My Awesome Blog-1</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In provident modi voluptas reprehenderit! Dolore reprehenderit expedita minus qui dolorum eaque. Odit ipsa ullam veritatis a cum sit soluta pariatur harum.</p>
+  </article>
+  <article id="second-article" class="blog"> 
+      <h3>My Awesome Blog-2</h3>
+      <p>Modi possimus quas commodi eius minus aliquid sint laborum dolorum tempore obcaecati corporis voluptates inventore numquam necessitatibus beatae accusamus aut laudantium culpa, debitis facere impedit, nobis eum in? Assumenda, reiciendis!</p>
+  </article>
+  <article id="third-article" class="blog">
+      <h3>My Awesome Blog-3</h3>
+      <p>Ipsa labore vero dolore aliquam quidem natus eius, dolores repellendus culpa facere saepe beatae, cumque delectus. Natus, neque! Sed quas voluptatibus ea! Iure incidunt ab possimus voluptatibus eius libero nesciunt.</p>
+  </article>
+</section>
+
+
+</main>
+
+
+
+<script>
+
+// const blogDetails = document.getElementsByTagName("p")
+// console.log(blogDetails);
+
+/* Getting Elements and Putting them in a variable and Adding CSSS */
+
+const firstArticle = document.getElementById("first-article");
+firstArticle.style.backgroundColor = "aqua";
+
+const secondbackSet = document.getElementById("second-article");
+ secondbackSet.style.backgroundColor = "skyblue"
+
+// Without creating a variable
+
+document.getElementById("third-article").style.backgroundColor = "pink"
+
+
+// for (const hello of blogDetails){
+//     console.log(hello)
+// }
+
+// Creating and Adding a new element to the html 
+
+const article = document.createElement("article")
+const h3 = document.createElement ("h3")
+const p = document.createElement("p")
+h3.innerText ="My Awesome Blog-4"
+p.innerText = "Ipsa labore vero dolore aliquam quidem natus eius, dolores repellendus culpa facere saepe beatae, cumque delectus. Natus, neque! "
+article.appendChild(h3);
+article.appendChild(p)
+
+document.getElementById("sectionID").appendChild(article)
+
+</script>
+</body>
+</html> 
